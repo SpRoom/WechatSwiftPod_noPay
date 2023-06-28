@@ -54,9 +54,9 @@ Pod::Spec.new do |s|
     'DEFINES_MODULE' => 'YES',
     'OTHER_LDFLAGS' => '-ObjC -all_load',
     # 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
-   # 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'  # Xcode12的里面因为有arm的模拟器到会有问题podspec 的 pod lib lint 验证不通过
+   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'  # Xcode12的里面因为有arm的模拟器到会有问题podspec 的 pod lib lint 验证不通过
   }
- # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }  # Xcode12的里面因为有arm的模拟器到会有问题podspec 的 pod lib lint 验证不通过
+ s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }  # Xcode12的里面因为有arm的模拟器到会有问题podspec 的 pod lib lint 验证不通过
 #  s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
  
 end
